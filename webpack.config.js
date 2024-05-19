@@ -10,14 +10,12 @@ const paths = {
   src: {
     js: "./src/js/",
     scss: "./src/scss",
-    img: "./src/images",
-    video: "./src/video"
+    img: "./src/images"
   },
   dist: {
     js: "./assets/js",
     css: "./assets/css",
-    img: "./assets/images",
-    video: "./assets/video"
+    img: "./assets/images"
   },
 };
 
@@ -87,9 +85,6 @@ module.exports = {
       patterns: [
         {
           from: paths.src.img, to: paths.dist.img,
-        },
-        {
-          from: paths.src.video, to: paths.dist.video,
         }
       ],
     }),
