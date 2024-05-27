@@ -142,6 +142,35 @@
   }
 }
 
+.card-hover-gradient-clear {
+  transition: background-color 0.2s ease-in-out, mask-image 0.2s ease-in-out;
+  background-color: clear;
+
+  .background {
+    mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 1))
+    );
+  }
+
+  &:hover {
+    background-color: $primary;
+
+    .background {
+      mask-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 1)),
+        to(rgba(0, 0, 0, 0.4))
+      );
+    }
+  }
+}
+
 .card-hover-rise {
   &:hover {
     transform: translateY(-8px);
