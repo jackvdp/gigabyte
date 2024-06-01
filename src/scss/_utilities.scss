@@ -26,6 +26,8 @@ $utilities: map-merge(
                 "gray": $gray-600,
                 "gray-dark": $gray-800,
                 "black": $black,
+                "darkBlue": $darkBlue,
+                "blueSteel": $blueSteel,
               )
             ),
         )
@@ -89,6 +91,8 @@ $utilities: map-merge(
                 "gray": $gray-600,
                 "gray-dark": $gray-800,
                 "black": $black,
+                "darkBlue": $darkBlue,
+                "blueSteel": $blueSteel,
               )
             ),
         )
@@ -115,6 +119,8 @@ $utilities: map-merge(
         "primary": rgba($primary, 0.1),
         "light": rgba($light, 0.1),
         "dark": rgba($dark, 0.1),
+        "darkBlue": rgba($darkBlue, 0.1),
+        "blueSteel": rgba($blueSteel, 0.1),
       ),
     ),
     "text-hover": (
