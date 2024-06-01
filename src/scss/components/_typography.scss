@@ -160,3 +160,14 @@ hr.or {
     background-position: 500%;
   }
 }
+
+@font-face {
+  font-family: 'archia';
+  src: url('/src/fonts/archia.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'archia', sans-serif;
+}
