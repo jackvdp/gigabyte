@@ -350,3 +350,14 @@ figure {
     vertical-align: top;
   }
 }
+
+.custom-figure {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  figure {
+    width: 400px;
+    height: 400px;
+  }
+}
