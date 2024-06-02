@@ -57,13 +57,25 @@ module.exports = {
         ],
       },
       {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/,
         use: {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
             outputPath: 'assets/fonts',
-            publicPath: '../fonts',
+            publicPath: '../fonts',  // Ensure the public path is correct for your production environment
+          },
+        }
+      },
+      // Add rule for OTF fonts
+      {
+        test: /\.otf$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'assets/fonts',
+            publicPath: '../fonts', // Adjust if necessary
           },
         }
       }

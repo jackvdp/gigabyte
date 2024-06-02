@@ -162,10 +162,25 @@ hr.or {
   }
 }
 
+
 @font-face {
   font-family: 'archia';
-  src: url('/src/fonts/archia.woff') format('woff');
+  src: url('/src/fonts/Archia-Regular.otf') format('opentype');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'archia';
+  src: url('/src/fonts/Archia-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'archia';
+  src: url('/src/fonts/Archia-Light.otf') format('opentype');
+  font-weight: 300;
   font-style: normal;
 }
 
