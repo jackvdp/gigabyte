@@ -523,67 +523,10 @@
   </section>
 
   <!-- logo list -->
-  <section class="border-bottom">
-    <div class="container">
-      <div class="carousel carousel-align text-center">
-        <div
-          data-carousel='{"loop": true, "autoplay": true, "rewind": false, "mouseDrag": true, "autoplayTimeout": 2000, "autoplayButtonOutput": false, "speed": 2000, "nav": false, "controls": false, "responsive": {"0": {"items": 2}, "768": {"items": 4}, "1200": {"items": 5}}}'>
-          <div>
-            <img src="/images/custom/logos/3.png" alt="Logo" class="logo" data-aos="fade-up">
-          </div>
-          <div>
-            <img src="/images/custom/logos/4.png" alt="Logo" class="logo" data-aos="fade-up" data-aos-delay="200">
-          </div>
-          <div>
-            <img src="/images/custom/logos/5.png" alt="Logo" class="logo" data-aos="fade-up" data-aos-delay="400">
-          </div>
-          <div>
-            <img src="/images/custom/logos/6.png" alt="Logo" class="logo" data-aos="fade-up" data-aos-delay="600">
-          </div>
-          <div>
-            <img src="/images/custom/logos/7.png" alt="Logo" class="logo" data-aos="fade-up" data-aos-delay="800">
-          </div>
-          <div>
-            <img src="/images/custom/logos/8.png" alt="Logo" class="logo" data-aos="fade-up" data-aos-delay="1000">
-          </div>
-          <div>
-            <img src="/images/custom/logos/9.png" alt="Logo" class="logo" data-aos="fade-up" data-aos-delay="1200">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {{> partials/logos}}
 
   <!-- contact -->
-  <section class="py-15 py-xl-20">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-xl-6">
-          <h2 class="fw-light mb-6">Tech not working?<br><span class="fw-bold"><span class="highlight"
-                data-aos="slide-right">Let's talk</span></span></h2>
-          <div class="row g-3">
-            <div class="col-md-6" data-aos="fade-up">
-              <label for="yourName" class="form-label">Your Name</label>
-              <input type="text" class="form-control" id="yourName" placeholder="Name">
-            </div>
-            <div class="col-md-6" data-aos="fade-up">
-              <label for="yourEmail" class="form-label">Your Email</label>
-              <input type="text" class="form-control" id="yourEmail" placeholder="Email">
-            </div>
-            <div class="col-md-12" data-aos="fade-up">
-              <label for="yourMessage" class="form-label">Message</label>
-              <textarea class="form-control" id="yourMessage" rows="6" placeholder="Message"></textarea>
-            </div>
-            <div class="col-md-8 mt-4" data-aos="fade-up">
-              <a href="" class="btn btn-lg btn-teal btn-with-icon rounded-pill">Let's talk <i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  {{> partials/contact }}
 
   <!-- footer -->
   {{> footer/footer-1
