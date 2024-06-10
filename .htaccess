@@ -1,0 +1,16 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect requests without .html extension to corresponding .html file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.html [L]
+
+# Optional: Redirect trailing slashes to URLs without trailing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !-d
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Optional: Ensure index.html is served when requesting the root directory
+DirectoryIndex index.html

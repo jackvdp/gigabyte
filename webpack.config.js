@@ -29,6 +29,7 @@ module.exports = {
   },
   output: {
     filename: paths.dist.js + "/[name].bundle.js",
+    path: path.resolve(__dirname, 'dist'), // Ensure the output path is set
   },
   mode: "development",
   devtool: "source-map",
@@ -145,5 +146,12 @@ module.exports = {
     contentBase: path.join(__dirname, "src"),
     compress: true,
     port: 9000,
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/$/, to: '/index.html' },
+        { from: /^\/about$/, to: '/about.html' },
+        { from: /^\/casestudies$/, to: '/casestudies.html' },
+      ]
+    }
   },
 };
