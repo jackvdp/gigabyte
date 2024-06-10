@@ -1,4 +1,21 @@
 {
     "buildCommand": "npm run build",
-    "outputDirectory": "dist"
+    "outputDirectory": "dist",
+    "rewrites": [
+        {
+            "source": "/about",
+            "destination": "/about.html"
+        },
+        {
+            "source": "/",
+            "destination": "/index.html"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/index",
+            "destination": "/",
+            "permanent": true
+        }
+    ]
 }
