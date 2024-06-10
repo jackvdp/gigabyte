@@ -148,8 +148,7 @@ module.exports = {
     historyApiFallback: {
       rewrites: [
         { from: /^\/$/, to: '/index.html' },
-        { from: /^\/about$/, to: '/about.html' },
-        { from: /^\/casestudies$/, to: '/casestudies.html' },
+        { from: /^(?!\/.*\..*).*/, to: (context) => `/${context.match[0]}.html` }
       ]
     }
   },
