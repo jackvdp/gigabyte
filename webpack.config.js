@@ -145,12 +145,12 @@ module.exports = {
     contentBase: path.join(__dirname, "src"),
     compress: true,
     port: 9000,
-    historyApiFallback: {
-      rewrites: [
-        { from: /^\/$/, to: '/index.html' },
-        { from: /^\/about$/, to: '/about.html' },
-        { from: /^\/casestudies$/, to: '/casestudies.html' },
-      ]
-    }
+    // historyApiFallback: {
+    //   rewrites: [
+    //     { from: /^\/$/, to: '/index.html' },
+    //     { from: /^\/about$/, to: '/about.html' },
+    //     { from: /^\/casestudies$/, to: '/casestudies.html' },
+    //   ]
+    // }
   },
 };
