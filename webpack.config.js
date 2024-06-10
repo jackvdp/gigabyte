@@ -29,7 +29,6 @@ module.exports = {
   },
   output: {
     filename: paths.dist.js + "/[name].bundle.js",
-    path: path.resolve(__dirname, 'dist'), // Ensure the output path is set
   },
   mode: "development",
   devtool: "source-map",
