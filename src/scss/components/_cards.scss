@@ -222,3 +222,19 @@
 .min-height-full {
   min-height: 100vh;
 }
+
+/* Styling for the figure with background */
+.figure-background {
+  background-position: center;  /* Center the background image */
+  background-size: cover;       /* Cover the area of the div without repeating */
+  transition: transform 0.3s ease;  /* Smooth transition for the transform */
+  transform: scale(1);          /* Default scale */
+  overflow: hidden;             /* Hide any parts outside the boundary */
+  height: 100%;                 /* Set a specific height or inherit it from the parent */
+  width: 100%;                  /* Set a specific width or inherit it from the parent */
+}
+
+/* Hover state: Scale the background image up */
+.figure-background:hover {
+  transform: scale(1.05);       /* Scale up by 5% */
+}
