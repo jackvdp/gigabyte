@@ -18,23 +18,26 @@ import "./modules/typed";
 import "./modules/smooth-scroll";
 import 'particles.js';
 
+const particleLineColor = '#7D55C7';
+const particleDotColor = '#2ED9C3';
+
 particlesJS("particles-js", {
     "particles": {
         "number": {
-            "value": 50,
+            "value": 40,
             "density": {
                 "enable": true,
                 "value_area": 800
             }
         },
         "color": {
-            "value": "#1E2933"
+            "value": particleDotColor
         },
         "shape": {
             "type": "circle",
             "stroke": {
                 "width": 0,
-                "color": "#1E2933"
+                "color": particleLineColor
             },
             "polygon": {
                 "nb_sides": 5
@@ -60,7 +63,7 @@ particlesJS("particles-js", {
             "random": true,
             "anim": {
                 "enable": false,
-                "speed": 40,
+                "speed": 45,
                 "size_min": 0.1,
                 "sync": false
             }
@@ -68,17 +71,17 @@ particlesJS("particles-js", {
         "line_linked": {
             "enable": true,
             "distance": 150,
-            "color": "#1E2933",
+            "color": particleLineColor,
             "opacity": 0.4,
             "width": 1
         },
         "move": {
             "enable": true,
-            "speed": 6,
+            "speed": 2,
             "direction": "none",
             "random": false,
             "straight": false,
-            "out_mode": "out",
+            "out_mode": "bounce",
             "bounce": false,
             "attract": {
                 "enable": false,
