@@ -1,2 +1,8 @@
 <script src="{{root}}/assets/js/vendor.bundle.js"></script>
 <script src="{{root}}/assets/js/index.bundle.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    });
+</script>
