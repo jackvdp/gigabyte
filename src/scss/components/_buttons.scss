@@ -20,6 +20,8 @@
   position: relative;
   padding-right: $btn-padding-x * 2;
   text-align: left;
+  transition: transform 0.3s ease; 
+  transform: translateZ(0);
 
   .bi {
     @include translate(0, -50%);
@@ -43,6 +45,11 @@
       right: $btn-padding-x-lg;
     }
   }
+}
+
+
+.btn-with-icon:hover {
+  transform: scale(1.05) translateY(-5px);
 }
 
 // icon btn
@@ -106,4 +113,32 @@
     border-color: $black;
     color: $white;
   }
+}
+
+
+/* Base styling for the pop-up-hover effect */
+.pop-up-hover {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+  transform: translateZ(0); /* Enhance 3D performance */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Initial subtle shadow */
+}
+
+/* When hovering, scale the element up slightly and adjust the shadow to give a lifted effect */
+.pop-up-hover:hover {
+  transform: scale(1.05); /* Slightly larger to create a 'pop' effect */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Larger shadow to simulate elevation */
+}
+
+.pop-up-hover-no-shadow {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+  transform: translateZ(0); /* Enhance 3D performance */
+}
+
+/* When hovering, scale the element up slightly and adjust the shadow to give a lifted effect */
+.pop-up-hover-no-shadow:hover {
+  transform: scale(1.05); /* Slightly larger to create a 'pop' effect */
 }

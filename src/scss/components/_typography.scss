@@ -224,3 +224,33 @@ body {
   padding: 2px 2px;
   display: inline-block;
 }
+
+.highlight-hover {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  margin-right: 10px
+}
+
+.highlight-hover:hover {
+  color: white !important;
+  transition: color 0.5s ease-out
+}
+
+.highlight-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: $purple;
+  transition: right 0.5s ease-out;
+  z-index: -1;
+}
+
+.highlight-hover:hover::before {
+  right: 0;
+}
+

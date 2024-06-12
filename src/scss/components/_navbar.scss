@@ -81,10 +81,10 @@
 
   .nav-link {
     @include nofocus;
-    @include media-breakpoint-up(lg) {
-      padding-left: rem(16) !important;
-      padding-right: rem(16) !important;
-    }
+    // @include media-breakpoint-up(lg) {
+    //   padding-left: rem(16) !important;
+    //   padding-right: rem(16) !important;
+    // }
   }
 
   .nav-icon {
