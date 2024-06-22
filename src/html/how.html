@@ -1,24 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    {{> partials/head title="Gigabyte Software – The Property Technology Specialists"}}
-    <style>
-        .carousel {
-            height: 100vh;
-            display: flex;
-        }
-
-        .slide {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-    </style>
+    {{> partials/head title="Gigabyte Software – How We Work"}}
+    {{> partials/carouselHead}}
 </head>
 
 <body>
@@ -32,7 +17,7 @@
     }}
 
     <!-- Hero -->
-    <section class="header overflow-hidden bg-black" data-aos="fade-in">
+    <section class="overflow-hidden bg-black" data-aos="fade-in">
         <div class="d-flex flex-column py-20 container foreground min-vh-100">
             <div class="row align-items-center justify-content-center justify-content-lg-between my-auto">
                 <div class="col-md-10 col-lg-6 col-xl-5 inverted mb-5 mb-lg-0 text-center text-lg-start">
@@ -85,19 +70,19 @@
     </section>
 
     <section class="carousel">
-        <div class="slide slide-1 red">
+        <div class="slide">
             <div>ONE</div>
         </div>
-        <div class="slide slide-2 orange">
+        <div class="slide">
             <div>TWO</div>
         </div>
-        <div class="slide slide-3 purple">
+        <div class="slide">
             <div>THREE</div>
         </div>
-        <div class="slide slide-4 green">
+        <div class="slide">
             <div>FOUR</div>
         </div>
-        <div class="slide slide-5 grey">
+        <div class="slide">
             <div>FIVE</div>
         </div>
     </section>
@@ -105,45 +90,16 @@
     <!-- contact -->
     {{> partials/contact }}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
+    <!-- footer -->
+    {{> footer/footer-1
+    logo="/assets/images/logo/logo-light.svg"
+    btnClass="btn-white"
+    class="py-15 py-xl-20 bg-darkblue inverted"
+    }}
 
-        const slides = gsap.utils.toArray(".slide");
-        const totalSlides = slides.length;
-
-        // Set the carousel width dynamically
-        const carousel = document.querySelector('.carousel');
-        carousel.style.width = `${totalSlides * 100}vw`;
-
-        gsap.to(slides, {
-            xPercent: -100 * (totalSlides - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".carousel",
-                start: "top top",
-                end: () => `+=${carousel.offsetWidth}`,
-                pin: true,
-                scrub: 1,
-                anticipatePin: 1
-            }
-        });
-
-        slides.forEach((slide, i) => {
-            gsap.to(slide.querySelector('.box'), {
-                x: "90vw",
-                scrollTrigger: {
-                    containerAnimation: ScrollTrigger.getById("carousel"),
-                    trigger: slide,
-                    start: "left center",
-                    end: "right center",
-                    scrub: true,
-                }
-            });
-        });
-    </script>
+    <!-- javascript -->
     {{> partials/scripts}}
+    {{> partials/carouselScripts}}
 </body>
 
 </html>

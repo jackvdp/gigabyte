@@ -41,6 +41,11 @@
   }
 }
 
+.permanent-white {
+  background: $white !important;
+  padding: 1rem 0 !important
+}
+
 // dark
 .navbar-dark {
   .navbar-nav {

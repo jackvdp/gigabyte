@@ -1,0 +1,38 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const slides = gsap.utils.toArray(".slide");
+    const totalSlides = slides.length;
+
+    // Set the carousel width dynamically
+    const carousel = document.querySelector('.carousel');
+    carousel.style.width = `${totalSlides * 100}vw`;
+
+    gsap.to(slides, {
+        xPercent: -100 * (totalSlides - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".carousel",
+            start: "top top",
+            end: () => `+=${carousel.offsetWidth}`,
+            pin: true,
+            scrub: 1,
+            anticipatePin: 1
+        }
+    });
+
+    slides.forEach((slide, i) => {
+        gsap.to(slide.querySelector('.box'), {
+            x: "90vw",
+            scrollTrigger: {
+                containerAnimation: ScrollTrigger.getById("carousel"),
+                trigger: slide,
+                start: "left center",
+                end: "right center",
+                scrub: true,
+            }
+        });
+    });
+</script>
