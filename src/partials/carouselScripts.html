@@ -14,25 +14,13 @@
         xPercent: -100 * (totalSlides - 1),
         ease: "none",
         scrollTrigger: {
-            trigger: ".carousel",
+            trigger: ".carousel-container",
             start: "top top",
-            end: () => `+=${carousel.offsetWidth}`,
+            end: () => `+=${carousel.offsetWidth - window.innerWidth}`,
             pin: true,
             scrub: 1,
-            anticipatePin: 1
+            anticipatePin: 1,
+            snap: 1 / (totalSlides - 1)
         }
-    });
-
-    slides.forEach((slide, i) => {
-        gsap.to(slide.querySelector('.box'), {
-            x: "90vw",
-            scrollTrigger: {
-                containerAnimation: ScrollTrigger.getById("carousel"),
-                trigger: slide,
-                start: "left center",
-                end: "right center",
-                scrub: true,
-            }
-        });
     });
 </script>
