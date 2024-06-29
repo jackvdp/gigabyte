@@ -4,6 +4,57 @@
 <head>
     {{> partials/head title="Gigabyte Software – How We Work"}}
     {{> partials/carouselHead}}
+    <style>
+        .slide-step {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            /* Align items to the top */
+            height: 100%;
+            width: 100%;
+            padding: 20px 0;
+            /* Add vertical padding */
+        }
+
+        .circular-icon {
+            width: 4rem;
+            height: 4rem;
+            background: #000;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem;
+            transition: all 0.2s ease-in-out;
+            z-index: 2;
+            flex-shrink: 0;
+            margin: 0 1rem;
+            /* Add horizontal margin */
+        }
+
+        .circular-icon:hover {
+            background: var(--bs-primary, #007bff);
+        }
+
+        .step-line {
+            flex-grow: 1;
+            height: 0.125rem;
+            background: #ddd;
+            margin-top: 2rem;
+            /* Align with the middle of the icon */
+        }
+
+        .step-line-start {
+            width: 2rem;
+            /* Width of the small line at the start */
+            height: 0.125rem;
+            background: #ddd;
+            margin-top: 2rem;
+            /* Align with the middle of the icon */
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -66,22 +117,34 @@
         </figure>
     </section>
 
-    <div class="carousel-container">
-        <section class="carousel">
+    <div class="carousel-container bg-opaque-blueSteel">
+        <section class="carousel py-15">
             <div class="slide">
-                <div>ONE</div>
+                <div class="row justify-content-center mb-5">
+                    <div class="text-center">
+                        <h2 class="fw-bold">How our process <span class="highlight"
+                                    data-aos="slide-right">works</span></h2>
+                    </div>
+                </div>
+                <div class="slide-step ">
+                    <div class="step-line-start"></div>
+                    <div class="circular-icon">1</div>
+                    <div class="step-line"></div>
+                </div>
             </div>
             <div class="slide">
-                <div>TWO</div>
+                <div class="slide-step">
+                    <div class="step-line-start"></div>
+                    <div class="circular-icon">2</div>
+                    <div class="step-line"></div>
+                </div>
             </div>
             <div class="slide">
-                <div>THREE</div>
-            </div>
-            <div class="slide">
-                <div>FOUR</div>
-            </div>
-            <div class="slide">
-                <div>FIVE</div>
+                <div class="slide-step">
+                    <div class="step-line-start"></div>
+                    <div class="circular-icon">3</div>
+                    <div class="step-line"></div>
+                </div>
             </div>
         </section>
     </div>
