@@ -165,18 +165,18 @@
     }
 
     &[aria-expanded="true"] {
-      color: var(--bs-primary);
+      color: var(--bs-purple);
 
       &::before {
-        background: var(--bs-primary);
+        background: var(--bs-purple);
       }
     }
 
     &:hover {
-      color: var(--bs-primary);
+      color: var(--bs-purple);
 
       &::before {
-        background: var(--bs-primary);
+        background: var(--bs-purple);
       }
     }
   }
