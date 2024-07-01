@@ -1,0 +1,18 @@
+<div class="card">
+    <figure class="media media-image equal-16-10" {{#if lightbox}}
+        data-bp='{"imgSrc": "{{root}}{{image}}" {{#if gallery}}, "parentGalleryClass": "{{gallery}}"{{/if}} }' {{/if}}>
+        <span {{#if caption}}data-caption="{{caption}}" {{/if}} style="background-image: url('{{root}}{{image}}')">
+        </span>
+    </figure>
+    <div class="card-body p-0 carousel-custom-label card-body-custom align-items-start">
+        <div class="card-labels">
+            <div class="eyebrow text-muted mb-1">Case Study</div>
+            <a href="{{link}}" class="card-title">
+                <h5 class="mb-0">{{title}}</h5>
+            </a>
+        </div>
+        <a href="{{link}}" class="btn btn-teal btn-with-icon rounded-pill btn-lg card-button">
+            View case study <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+</div>

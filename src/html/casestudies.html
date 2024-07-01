@@ -11,49 +11,46 @@
   <!-- navbar -->
   {{> navbar/navbar}}
 
-
-  <!-- case studies -->
-  {{> partials/casestudies}}
-
-
-  <!-- testimonials -->
-  <section class="py-15 py-xl-20 border-bottom">
+  <section class="overflow-hidden min-vh-100 d-flex align-items-end justify-content-center">
     <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-12">
-          <h2>Why people choose <span class="highlight" data-aos="slide-right">Gigabyte</span></h2>
-        </div>
-      </div>
-      <div class="row g-3 g-lg-5 justify-content-center">
-        <div class="col-lg-6" data-aos="fade-up">
-          <blockquote class="blockquote">
-            <span class="lh-1 fs-1 mb-0 text-muted">"</span>
-            <p class="fs-4 mb-3">
-              Gigabyte Software streamlined our processes, <span class="fw-bold text-darkBlue">saving us time</span> and
-              boosting efficiency dramatically.
-            </p>
-            <footer class="blockquote-footer">
-              <span class="d-block lh-1 text-black">Sarah Mitchell</span>
-              <small>Operations Manager, Evergreen Housing</small>
-            </footer>
-          </blockquote>
-        </div>
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <blockquote class="blockquote">
-            <span class="lh-1 fs-1 mb-0 text-muted">"</span>
-            <p class="fs-4 mb-3">
-              Their analytics tools increased our investment returns by 30%, making us more <span
-                class="fw-bold text-darkBlue">agile and informed</span>.
-            </p>
-            <footer class="blockquote-footer">
-              <span class="d-block lh-1 text-black">James Thompson</span>
-              <small>CEO, Apex Asset Management</small>
-            </footer>
-          </blockquote>
+      <div class="row">
+        <div class="col-md-10 col-lg-8" data-aos="fade-left">
+          <div class="carousel carousel-visible carousel-label-controls gallery-1">
+            <div data-carousel='{"mouseDrag": true, "gutter": 48, "loop": true, "items": 1, "nav": false}'>
+
+              {{> partials/casestudy
+              image="/assets/images/custom/1224.jpg"
+              link=""
+              title="Consult Construct"
+              }}
+
+              {{> partials/casestudy
+              image="/assets/images/custom/946.jpg"
+              link=""
+              title="Frankham Group"
+              }}
+
+              {{> partials/casestudy
+              image="/assets/images/custom/678.jpg"
+              link=""
+              title="JM2 Group"
+              }}
+
+              {{> partials/casestudy
+              image="/assets/images/custom/gb0.jpg"
+              link=""
+              title="Virgin Land"
+              }}
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- testimonials -->
+  {{> partials/testimonials}}
 
   <!-- logo list -->
   {{> partials/logos}}
@@ -63,7 +60,6 @@
 
   <!-- footer -->
   {{> footer/footer-1}}
-
 
   <!-- javascript -->
   {{> partials/scripts}}

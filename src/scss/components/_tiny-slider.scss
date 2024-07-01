@@ -39,6 +39,52 @@
     }
   }
 
+  &[class*="-label-controls"] {
+    .tns-controls {
+      position: absolute;
+      right: 0;
+      bottom: 148px;
+
+      button {
+        position: relative;
+        width: rem(80);
+        height: rem(80);
+        background: $black;
+        font-size: rem(24);
+        margin-top: rem(-40);
+        border-radius: 0;
+        opacity: 1;
+
+        &[data-controls="prev"] {
+          left: 0;
+        }
+
+        &[data-controls="next"] {
+          right: 0;
+        }
+
+        &:hover {
+          background: $purple;
+        }
+
+        &:active {
+          background: darken($purple, 10%);
+        }
+      }
+    }
+
+    .tns-slide-active .carousel-custom-label {
+      opacity: 1;
+    }
+
+    .carousel-custom-label {
+      margin-top: 48px;
+      height: 100px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+
   &[class*="-big-controls"] {
     .tns-controls {
       position: absolute;
@@ -71,6 +117,17 @@
           background: darken($purple, 10%);
         }
       }
+    }
+
+    .tns-slide-active .carousel-custom-label {
+      opacity: 1;
+    }
+
+    .carousel-custom-label {
+      margin-top: 48px;
+      height: 100px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
   }
 
@@ -133,7 +190,7 @@
 }
 
 .carousel-thumbs {
-  > div {
+  >div {
     @include nofocus;
     opacity: 0.25;
     max-width: 100%;
@@ -289,4 +346,19 @@
       background: rgba($black, 0.4);
     }
   }
+}
+
+.card-body-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-button {
+  margin-left: auto;
 }
