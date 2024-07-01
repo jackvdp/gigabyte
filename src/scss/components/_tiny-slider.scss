@@ -64,11 +64,11 @@
         }
 
         &:hover {
-          background: $primary;
+          background: $purple;
         }
 
         &:active {
-          background: darken($primary, 10%);
+          background: darken($purple, 10%);
         }
       }
     }
