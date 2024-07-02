@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {{> partials/head title="Gigabyte Software – Frankham Group"}}
+</head>
+
+<body>
+
+    <!-- navbar -->
+    {{> navbar/navbar}}
+
+    <!-- post -->
+    <article>
+        <section class="bg-black inverted overflow-hidden">
+            <div class="d-flex flex-column py-15 container min-vh-75 level-3">
+                <div class="row justify-content-center mt-auto">
+                    <div class="col-lg-10 col-xl-8">
+                        <span class="badge bg-opaque-white text-white rounded-pill mb-2">Case Study</span>
+                        <h1 class="display-1">Client: Frankham Group</h1>
+                    </div>
+                </div>
+            </div>
+            <span style="background-image: url('./assets/images/blog-3.jpg')"
+                class="background background-gradient-horizontal" data-top-top="transform: translateY(0%);"
+                data-top-bottom="transform: translateY(10%);">
+            </span>
+        </section>
+        <section class="py-10 py-xl-15">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-8">
+
+                        <p class="fs-4 fw-bold mb-4 lh-sm">Who they are:</p>
+                        <p class="fs-lg text-secondary">Frankham Group provides a comprehensive range of building
+                            services covering design, engineering and consultancy services. With several subsidiaries,
+                            like Frankham RMS (Risk Management Services), they provide everything from building surveys
+                            to engineering consultancy.</p>
+
+                        <p class="fs-lg fw-bold mb-2">Challenges they were having:</p>
+                        <p class="fs-lg text-secondary">When Frankham Group decided to make the switch to a new CRM
+                            system, they realised their data organisation could be improved. They were using a mix of
+                            spreadsheets, legacy systems, and other ad-hoc tools to store information and keep track of
+                            existing clients and future prospects. But this led to missed opportunities with potential,
+                            existing, and historic clients.</p>
+
+                        <p class="fs-4 fw-bold mb-4 lh-sm">What we did:</p>
+                        <p class="fs-lg text-secondary">Like a lot of businesses, Frankham Group's senior management
+                            team were excited about AI and the benefits it could bring to their organisation. But a lot
+                            of the information and stories in the press you read about AI don't really give you tips
+                            about the practical application of it. If anything, what you read doesn't touch the surface
+                            of what's possible.</p>
+
+                        <p class="fs-lg text-secondary">We started with an interactive workshop to see what <em>was</em>
+                            possible and spot opportunities, together. This is when Frankham Group realised they were
+                            sitting on a potential goldmine. They had valuable contact information of potential
+                            customers in their email system that, should they have a way of extracting it, could fill
+                            their pipeline with over £1 million worth of potential customers - immediately.</p>
+
+                        <p class="fs-lg text-secondary">After this realisation, we used AI to extract this data and
+                            enrich it with information that would make the data set even more valuable to the business.
+                        </p>
+
+                        <p class="fs-4 fw-bold mb-4 lh-sm">How we did it:</p>
+
+                        <p class="fs-lg fw-bold mb-2">Extracting contacts using AI</p>
+                        <p class="fs-lg text-secondary">We used AI algorithms to pull contact details straight from
+                            email signatures in their system and gathered detailed statistics on each contact. This
+                            included figuring out who each contact belonged to, how often they were in touch, and what
+                            their interactions were about. From that, we made sure no contact information was lost.</p>
+
+                        <p class="fs-lg fw-bold mb-2">Data Enrichment:</p>
+                        <p class="fs-lg text-secondary">Once we'd pulled all the contact information, we took it and
+                            added extra details from Linkedin and other sources to provide more context about each
+                            person (information like their current job, professional background, and potential business
+                            opportunities). Armed with this enriched data, Franken Group could then make better, more
+                            informed decisions and customise their communication strategies moving forward.</p>
+
+                        <p class="fs-lg fw-bold mb-2">CRM Integration:</p>
+                        <p class="fs-lg text-secondary">For this, we worked with Deltek (their new CRM provider) to
+                            automate data updates. We set the system up to run nightly updates that would populate the
+                            CRM with the latest contact information. Safeguarding this was also a top priority, so we
+                            created rules and flags to highlight important contacts for the business development team,
+                            plugging those leaks in the system. This way, it would make sure they wouldn't miss any
+                            opportunities.</p>
+
+                        <p class="fs-lg fw-bold mb-2">Automated Alerts:</p>
+                        <p class="fs-lg text-secondary">We also set up alerts when a contact changed companies. This
+                            would act as a reminder for the team to reach out and congratulate them on their new role.
+                            More importantly, it would invite them to explore new business opportunities. With this new
+                            proactive approach, we helped Franken Group stay connected with their contacts and leverage
+                            their existing relationships to win new business.</p>
+
+                        <p class="fs-4 fw-bold mb-4 lh-sm">Impact:</p>
+                        <ul class="fs-lg text-secondary">
+                            <li>Extracted over 15,000 contacts from emails, to build a comprehensive data set.</li>
+                            <li>Identified 1,500 contacts that had previously slipped through the cracks, creating new
+                                business opportunities.</li>
+                            <li>Added more than £2 million to their sales pipeline in the first 6 months after the
+                                extraction.</li>
+                            <li>Put Franken Group in a stronger position to maintain client relationships and act upon
+                                new business opportunities.</li>
+                            <li>Demonstrated how AI and technology can successfully transform business operations and
+                                help to drive growth.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!-- nav -->
+    {{> partials/articleNav
+    backLink="/consult"
+    backTitle="Consult Construct"
+    forwardLink="/jm2"
+    forwardTitle="JM2 Group"
+    }}
+
+    <!-- footer -->
+    {{> footer/footer-1}}
+
+    <!-- javascript -->
+    {{> partials/scripts}}
+</body>
+
+</html>
