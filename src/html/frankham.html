@@ -12,20 +12,10 @@
 
     <!-- post -->
     <article>
-        <section class="bg-black inverted overflow-hidden">
-            <div class="d-flex flex-column py-15 container min-vh-75 level-3">
-                <div class="row justify-content-center mt-auto">
-                    <div class="col-lg-10 col-xl-8">
-                        <span class="badge bg-opaque-white text-white rounded-pill mb-2">Case Study</span>
-                        <h1 class="display-1">Client: Frankham Group</h1>
-                    </div>
-                </div>
-            </div>
-            <span style="background-image: url('./assets/images/custom/946.jpg')"
-                class="background background-gradient-horizontal" data-top-top="transform: translateY(0%);"
-                data-top-bottom="transform: translateY(10%);">
-            </span>
-        </section>
+        {{> partials/caseStudyHeader
+        title="Client: Frankham Group"
+        link="946.jpg"
+        }}
         <section class="py-10 py-xl-15">
             <div class="container">
                 <div class="row justify-content-center">
