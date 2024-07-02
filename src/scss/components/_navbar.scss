@@ -177,3 +177,28 @@
     }
   }
 }
+
+.navbar-dynamic-bg {
+  &.navbar-transparent {
+    background: transparent !important;
+    
+    &.navbar-light {
+      .navbar-nav {
+        .nav-link {
+          color: $white;
+          text-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
+        }
+      }
+      
+      .btn-outline-purple {
+        color: $white;
+        border-color: $white;
+        
+        &:hover {
+          background-color: $white;
+          color: $purple;
+        }
+      }
+    }
+  }
+}
