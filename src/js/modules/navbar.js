@@ -13,15 +13,32 @@ navbar.forEach(function (element) {
 })
 
 function updateNavbarTransparency() {
-    const navbar = document.querySelector('#mainNav');
+    const navbars = document.querySelectorAll('.navbar-dynamic-bg');
     const scrollThreshold = 100; // Adjust this value as needed
   
-    if (window.scrollY <= scrollThreshold && !navbar.classList.contains('navbar-active')) {
-      navbar.classList.add('navbar-transparent');
-    } else {
-      navbar.classList.remove('navbar-transparent');
-    }
+    navbars.forEach(navbar => {
+      const logoDark = navbar.querySelector('.logo-dark');
+      const logoLight = navbar.querySelector('.logo-light');
+  
+      if (window.scrollY <= scrollThreshold && !navbar.classList.contains('navbar-active')) {
+        navbar.classList.add('navbar-transparent');
+        if (logoDark && logoLight) {
+          logoDark.style.display = 'none';
+          logoLight.style.display = 'inline-block';
+        }
+      } else {
+        navbar.classList.remove('navbar-transparent');
+        if (logoDark && logoLight) {
+          logoDark.style.display = 'inline-block';
+          logoLight.style.display = 'none';
+        }
+      }
+    });
   }
+  
+  // Call the function on scroll and on page load
+  window.addEventListener('scroll', updateNavbarTransparency);
+  window.addEventListener('load', updateNavbarTransparency);
   
   // Call the function on scroll and on page load
   window.addEventListener('scroll', updateNavbarTransparency);
