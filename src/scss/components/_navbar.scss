@@ -6,6 +6,11 @@
   padding: rem(32) 0;
 }
 
+.navbar a.active {
+  background-color: $purple;
+  color: white !important;
+}
+
 .navbar-sticky {
   transform: translateY(0%);
   transition: all 0.4s ease-in-out;
@@ -181,7 +186,7 @@
 .navbar-dynamic-bg {
   &.navbar-transparent {
     background: transparent !important;
-    
+
     &.navbar-light {
       .navbar-nav {
         .nav-link {
@@ -189,11 +194,11 @@
           text-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
         }
       }
-      
+
       .btn-outline-purple {
         color: $white;
         border-color: $white;
-        
+
         &:hover {
           background-color: $white;
           color: $purple;

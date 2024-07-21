@@ -15,11 +15,9 @@ navbar.forEach(function (element) {
 function updateNavbarTransparency() {
   const navbars = document.querySelectorAll('.navbar-dynamic-bg');
   const scrollThreshold = 100; // Adjust this value as needed
-
   navbars.forEach(navbar => {
     const logoDark = navbar.querySelector('.logo-dark');
     const logoLight = navbar.querySelector('.logo-light');
-
     if (window.scrollY <= scrollThreshold && !navbar.classList.contains('navbar-active')) {
       navbar.classList.add('navbar-transparent');
       if (logoDark && logoLight) {
@@ -36,6 +34,23 @@ function updateNavbarTransparency() {
   });
 }
 
-// Call the function on scroll and on page load
+function highlightCurrentPage() {
+  const navLinks = document.querySelectorAll('.navbar a');
+  const currentPath = window.location.pathname;
+
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+// Call the functions on scroll, page load, and DOM content loaded
 window.addEventListener('scroll', updateNavbarTransparency);
-window.addEventListener('load', updateNavbarTransparency);
+window.addEventListener('load', () => {
+  updateNavbarTransparency();
+  highlightCurrentPage();
+});
+document.addEventListener('DOMContentLoaded', highlightCurrentPage);
