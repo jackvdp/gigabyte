@@ -49,7 +49,7 @@
         position: relative;
         width: rem(80);
         height: rem(80);
-        background: $black;
+        background: $teal;
         font-size: rem(24);
         margin-top: rem(-40);
         border-radius: 0;
@@ -64,11 +64,11 @@
         }
 
         &:hover {
-          background: $purple;
+          background: darken($teal, 10%);
         }
 
         &:active {
-          background: darken($purple, 10%);
+          background: darken($teal, 10%);
         }
       }
     }
@@ -80,7 +80,7 @@
     .carousel-custom-label {
       margin-top: 48px;
       height: 100px;
-      opacity: 0;
+      opacity: 0.5;
       transition: opacity 0.3s ease;
     }
   }
@@ -281,7 +281,7 @@
       width: 1em;
       height: 1em;
       margin: -0.5em 0 0 -0.5em;
-      color: $white;
+      color: $black;
     }
 
     &:hover {

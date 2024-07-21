@@ -1,8 +1,18 @@
 <div class="card">
-    <figure class="media media-image equal-16-10" {{#if lightbox}}
+    <figure class="media media-image equal-16-10 position-relative" {{#if lightbox}}
         data-bp='{"imgSrc": "{{root}}{{image}}" {{#if gallery}}, "parentGalleryClass": "{{gallery}}"{{/if}} }' {{/if}}>
-        <span {{#if caption}}data-caption="{{caption}}" {{/if}} style="background-image: url('{{root}}{{image}}')">
+        <span {{#if caption}}data-caption="{{caption}}" {{/if}} style="background-image: url('{{root}}{{image}}'); 
+                   filter: brightness(50%); /* This dims the image */
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   right: 0;
+                   bottom: 0;">
         </span>
+        {{#if logo}}
+        <img src="{{root}}{{logo}}" alt="Logo" class="position-absolute"
+            style="top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 50%; max-height: 50%;">
+        {{/if}}
     </figure>
     <div class="card-body p-0 carousel-custom-label card-body-custom align-items-start">
         <div class="card-labels">
@@ -11,7 +21,7 @@
                 <h5 class="mb-0">{{title}}</h5>
             </a>
         </div>
-        <a href="{{link}}" class="btn btn-teal btn-with-icon rounded-pill btn-lg card-button">
+        <a href="{{link}}" class="btn btn-purple btn-with-icon rounded-pill btn-lg card-button">
             View case study <i class="bi bi-arrow-right"></i>
         </a>
     </div>
