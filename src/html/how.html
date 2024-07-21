@@ -8,69 +8,10 @@
 <body>
 
     <!-- navbar -->
-    {{> navbar/navbar class="navbar-dynamic-bg"
-    }}
-
-    <!-- Hero -->
-    <section class="overflow-hidden bg-black" data-aos="fade-in">
-        <div class="d-flex flex-column py-20 container foreground min-vh-100">
-            <div class="row align-items-center justify-content-center justify-content-lg-between my-auto">
-                <div class="col-md-10 col-lg-6 col-xl-5 inverted mb-5 mb-lg-0 text-center text-lg-start">
-                    <h1 class="lh-sm text-white mb-4" data-aos="fade-right">Consultancy-led software <span
-                            class="highlight" data-aos="slide-right">experts</span> for the UK property industry</h1>
-                    <p class="lead text-white fw-bold" data-aos="fade-right" data-aos-delay="100">
-                        Making changes or upgrades to your systems was never easy. Until now. Here’s how we help the
-                        property industry find the best (and most cost-effective) solutions to technology.
-                    </p>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <a data-scroll href="#process" class="btn btn-teal rounded-pill btn-lg btn-raise">
-                            Explore
-                        </a>
-                    </div>
-                </div>
-
-                <!-- contact form -->
-                <div class="col-md-10 col-lg-6 col-xl-5" data-aos="fade-up">
-                    <div class="card bg-opaque-black">
-                        <div class="card-body bg-white">
-                            <form action="#" class="row g-2">
-                                <div class="col-lg-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="floatingInput-1"
-                                            placeholder="Your Name">
-                                        <label for="floatingInput-1">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="floatingInput-3"
-                                            placeholder="name@example.com">
-                                        <label for="floatingInput-3">Email address</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a comment here"
-                                            id="floatingTextarea2" style="height: 100px"></textarea>
-                                        <label for="floatingTextarea2">Message</label>
-                                    </div>
-                                </div>
-                                <div class="d-grid">
-                                    <a href="" class="btn btn-teal btn-lg">Get in touch</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <figure class="background background-overlay" style="background-image: url('./assets/images/custom/589.jpg')"
-            data-top-top="transform: scale(1);" data-top-bottom="transform: scale(1.1);">
-        </figure>
-    </section>
+    {{> navbar/navbar }}
 
     <!-- Intro -->
-    <section class="py-15 py-xl-20 m-xl-3 overflow-hidden bg-opaque-blueSteel">
+    <section class="py-15 py-xl-20 overflow-hidden bg-opaque-blueSteel">
         <div class="container foreground">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 mb-5 mb-lg-0">
@@ -93,6 +34,11 @@
                         your business: whether that’s improving what you’ve got, helping you find the best off-the-shelf
                         product, helping different systems talk to each other, or building you a bespoke app.
                     </p>
+                    <div class="pt-2" data-aos="fade-up">
+                        <a data-scroll href="#process" class="btn btn-teal rounded-pill btn-lg btn-raise">
+                            Explore
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,16 +87,7 @@
                                     <h4 class="fs-6">Recommendations</h4>
 
                                     <p class="text-secondary">After the discovery session, we'll know enough about your
-                                        business, customers, and suppliers to make our recommendation. This
-                                        recommendation will be to either:</p>
-
-                                    <ol class="text-secondary">
-                                        <li class="text-secondary">Getting the best from what you already have.</li>
-                                        <li class="text-secondary">Help you buy an off-the-shelf product.</li>
-                                        <li class="text-secondary">Integrate any software needed to fill gaps.</li>
-                                        <li class="text-secondary">Build you a fully bespoke system if nothing currently
-                                            exists to suit your needs.</li>
-                                    </ol>
+                                        business, customers, and suppliers to make our recommendation.</p>
 
                                     <p class="text-secondary">We'll explain exactly why and how we came to the
                                         conclusion. This consultancy-led approach means you're confident in the decision
