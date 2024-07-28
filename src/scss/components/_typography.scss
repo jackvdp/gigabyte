@@ -141,10 +141,10 @@ hr.or {
 }
 
 .add-semi-colon-to-end {
-  position: inline;
 
   &::after {
     content: ";";
+    font-weight: 600;
     color: $purple;
   }
 }
@@ -154,6 +154,7 @@ hr.or {
 
   &::after {
     content: ";";
+    font-weight: 600;
     color: $teal;
   }
 }
