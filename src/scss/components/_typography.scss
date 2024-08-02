@@ -207,22 +207,6 @@ body {
   font-family: 'archia', sans-serif;
 }
 
-@keyframes fadeInHighlight {
-  from {
-    background-color: transparent;
-    /* Start with no background */
-    color: black;
-    /* Start with black text */
-  }
-
-  to {
-    background-color: $purple;
-    /* End with a purple background */
-    color: white;
-    /* End with white text */
-  }
-}
-
 /* Base state for elements before animation starts */
 [data-aos="slide-right"] {
   visibility: hidden;
@@ -240,6 +224,13 @@ body {
 .highlight {
   background-color: $purple;
   color: white;
+  padding: 2px 2px;
+  display: inline-block;
+}
+
+p .highlight {
+  background-color: $teal;
+  color: black;
   padding: 2px 2px;
   display: inline-block;
 }
