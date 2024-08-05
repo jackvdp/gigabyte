@@ -302,6 +302,14 @@
   }
 }
 
+.white-arrows .tns-controls button {
+  color: white;
+}
+
+.white-arrows .tns-controls button .bi {
+  color: white;
+}
+
 // nav
 .tns-nav {
   @include nofocus;
